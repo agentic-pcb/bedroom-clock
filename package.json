@@ -20,7 +20,8 @@
     "export:images:display": "tsci build seven-segment-display.circuit.tsx --disable-parts-engine --pcb-png --3d-png && mkdir -p docs/images && cp dist/seven-segment-display/pcb.png docs/images/display-pcb.png && cp dist/seven-segment-display/3d.png docs/images/display-3d.png",
     "export:images:controller": "tsci build controller.circuit.tsx --disable-parts-engine --pcb-png --3d-png && mkdir -p docs/images && cp dist/controller/pcb.png docs/images/controller-pcb.png && cp dist/controller/3d.png docs/images/controller-3d.png",
     "export:cpp": "mkdir -p cpp && bun scripts/export-cpp.ts > cpp/SevenSegLayout.h",
-    "update:claude": "curl -fsSL https://raw.githubusercontent.com/agentic-pcb/example-base/main/CLAUDE.md -o CLAUDE.md",
+    "npm:reinstall": "rm -rf ./node_modules && rm -f ./package-lock.json && npm i && npm i",
+    "update:claude":"curl -fsSL https://raw.githubusercontent.com/agentic-pcb/example-base/main/CLAUDE.md -o CLAUDE.md",
     "update:llms": "mkdir -p docs && curl -fsSL https://docs.tscircuit.com/llms.txt -o docs/llms.txt",
     "update:skill": "npx --yes skills add tscircuit/skill -a claude-code --copy -y",
     "format": "prettier --write .",
@@ -32,8 +33,8 @@
     "eslint": "^10.12.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-simple-import-sort": "^14.0.0",
-    "prettier": "^3.9.9",
-    "tscircuit": "^0.0.2743",
-    "typescript-eslint": "^8.71.0"
+    "prettier": "^3.9.10",
+    "tscircuit": "^0.0.2890",
+    "typescript-eslint": "^8.71.2"
   }
 }
